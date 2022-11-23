@@ -5,7 +5,8 @@ app.use(cors());
 const mongoose = require("mongoose");
 const port = process.env.PORT || 3000;
 const City = require('./model.js');
-mongoose.connect("mongodb+srv://Abhay:Abhaycodeman@cluster0.ertuix8.mongodb.net/?retryWrites=true&w=majority")
+
+mongoose.connect(process.env.MONGODB_URI||'mongodb://localhost/Weather')
 .then(res=>{
     console.log("Connection Established !! ");
 }).catch(err=>{
