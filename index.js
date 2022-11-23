@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 const City = require('./model.js');
 const uri = process.env.MONGODB_URI;
 
-mongoose.connect('mongodb+srv://Abhay:Abhaycodeman@cluster0.ertuix8.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true}).then(res=>{
+mongoose.connect('mongodb+srv://*****:***********@cluster0.ertuix8.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true}).then(res=>{
     console.log("Connection Established !! ");
 }).catch(err=>{
     console.log(err);
