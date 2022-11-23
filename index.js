@@ -5,8 +5,9 @@ app.use(cors());
 const mongoose = require("mongoose");
 const port = process.env.PORT || 3000;
 const City = require('./model.js');
+const uri = process.env.MONGODB_URI;
 
-mongoose.connect(process.env.MONGODB_URI||'mongodb://localhost/Weather')
+mongoose.connect(uri)
 .then(res=>{
     console.log("Connection Established !! ");
 }).catch(err=>{
